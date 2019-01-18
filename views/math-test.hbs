@@ -1,0 +1,17 @@
+<h2>Math Quiz</h2>
+
+{{#if latestContext}}
+    {{#if answeredCorrectly}}
+        <p>Correct! {{latestContext.firstNumber}} {{latestContext.operand}} {{latestContext.secondNumber}} = {{latestContext.answer}}</p>
+    {{else}}
+        <p>Wrong! {{latestContext.firstNumber}} {{latestContext.operand}} {{latestContext.secondNumber}} = {{latestContext.answer}}</p>
+    {{/if}}
+{{/if}}
+
+
+<p>What is {{firstNumber}} {{operand}} {{secondNumber}}?</p>
+<form action="/math-test" method="POST">
+    Answer: <input type="number" name="answer">
+    <br>
+    <input type="submit">
+</form>

@@ -1,0 +1,14 @@
+<h2>Calculator</h2>
+<form action="/calculator" method="GET">
+    First number: <input type="number" name="firstNumber">
+    Operand: <input type="text" name="operand">
+    Second number: <input type="number" name="secondNumber">
+    <input type="submit">
+</form>
+{{#if answered}}
+    {{#if errorMessage}}
+        <p>{{errorMessage}}</p>
+    {{else}}
+        <p> {{firstNumber}} {{operand}} {{secondNumber}} = {{answer}}</p>
+    {{/if}}
+{{/if}}
