@@ -1,4 +1,9 @@
-<form action="post" action="/s">
-    City: <input name="City"><br>
+<h2>Search</h2>
+<form method="post" action="/s">
+    City: <input name="city"><br>
     <input type="submit">
 </form>
+<br>
+{{#if city}}
+    <p>You searched for {{city}}</p>
+{{/if}}
